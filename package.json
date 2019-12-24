@@ -1,0 +1,34 @@
+{
+  "name": "mern-practice",
+  "version": "1.0.0",
+  "description": "My MERN stack practice for the  first time",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "serve": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makcmakc/MERN-Practice.git"
+  },
+  "keywords": [
+    "mern.",
+    "react"
+  ],
+  "author": "Maximmillian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/makcmakc/MERN-Practice/issues"
+  },
+  "homepage": "https://github.com/makcmakc/MERN-Practice#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.3"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.2",
+    "config": "^3.2.4",
+    "nodemon": "^2.0.2"
+  }
+}
