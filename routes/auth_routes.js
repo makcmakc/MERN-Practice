@@ -17,9 +17,10 @@ router.post(
 	async (req, res) => {
 
 	try {
+		//console.log('Body: ', req.body)
 		const errors = validationResult(req)
 
-		if (errors.isEmpty()) {
+		if (!errors.isEmpty()) {
 			return res.status(400).json({
 				errors: errors.array(),
 				message: 'Некорректный данные при регистрации' // Incorrect Registration Data
@@ -48,14 +49,14 @@ router.post(
 	'/login', 
 	[
 		check('email', "Введите корректный E-mail").normalizeEmail().isEmail(), // Enter a correct E-mail
-		check('password', 'Введите пароль').exist() // Enter a Password
+		check('password', 'Введите пароль').exists() // Enter a Password
 	],
 	async (req, res) => {
 
 	try {
 		const errors = validationResult(req)
 
-		if (errors.isEmpty()) {
+		if (!errors.isEmpty()) {
 			return res.status(400).json({
 				errors: errors.array(),
 				message: 'Некорректный данные при регистрации' // Incorrect Registration Data
